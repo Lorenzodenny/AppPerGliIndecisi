@@ -23,8 +23,10 @@ function displayOptions() {
         optionText.textContent = `${index + 1}. ${option}`;
         div.appendChild(optionText);
 
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Rimuovi';
+        const removeButton = document.createElement('i');
+        removeButton.className = 'fas fa-trash-alt';
+        removeButton.style.color = 'red';
+        removeButton.style.cursor = 'pointer';
         removeButton.style.marginLeft = '10px';
         removeButton.onclick = () => removeOption(index);
         div.appendChild(removeButton);
@@ -32,6 +34,8 @@ function displayOptions() {
         optionsList.appendChild(div);
     });
 }
+
+
 
 function removeOption(index) {
     options.splice(index, 1);

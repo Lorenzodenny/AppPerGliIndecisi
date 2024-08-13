@@ -110,6 +110,28 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
+.fas.fa-trash-alt {
+    font-size: 1.2rem;  /* Dimensione dell'icona */
+    color: red;         /* Colore iniziale dell'icona */
+    cursor: pointer;    /* Puntatore del mouse */
+}
+
+.fas.fa-trash-alt:hover {
+    color: darkred;     /* Cambia colore quando si passa il mouse sopra */
+    transform: scale(1.2); /* Ingrandisci leggermente l'icona al passaggio del mouse */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+#optionsList div {
+    margin-bottom: 10px; /* Aumenta questo valore per più spazio */
+}
+#optionsList div {
+    margin-bottom: 10px; /* Spazio tra le opzioni */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
