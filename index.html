@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrazioni Random</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Benvenuto al 'Che cazzo facciamo al mio compleanno!???!!?'</h1>
+        <div class="input-section">
+            <input type="text" id="optionInput" placeholder="Aggiungi un'opzione">
+            <button onclick="addOption()">Aggiungi</button>
+        </div>
+        <div id="optionsList"></div>
+
+        <div class="settings">
+            <label for="numDraws">Numero di Estrazioni (max 30):</label>
+            <input type="number" id="numDraws" min="1" max="30" value="1">
+            <button onclick="startDraw()">Inizia Estrazione</button>
+        </div>
+
+        <!-- Dado nascosto inizialmente -->
+        <div class="dice" style="display: none;">
+            <img src="images/7603277-removebg-preview.png" alt="Dado" id="diceImage">
+        </div>
+
+        <div id="results"></div>
+        <div id="mostFrequent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
