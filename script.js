@@ -45,6 +45,19 @@ function removeOption(index) {
 
 function startDraw() {
     const numDraws = parseInt(document.getElementById('numDraws').value);
+    const mostFrequentDiv = document.getElementById('mostFrequent');
+    const resultsDiv = document.getElementById('results');
+    
+    // Resetta il contenuto dei div prima di ogni nuova estrazione
+    mostFrequentDiv.innerHTML = '';
+    resultsDiv.innerHTML = '';
+
+    // Verifica se ci sono opzioni disponibili
+    if (options.length === 0) {
+        mostFrequentDiv.innerHTML = `<div style="color: red; font-weight: bold;">Aggiungi almeno un'opzione coglione. Cit. 'Richard Little Antonios'.</div>`;
+        return;
+    }
+
     if (numDraws > 0 && numDraws <= 30) {
         const dice = document.querySelector('.dice');
         dice.style.display = 'block'; // Mostra il dado
@@ -60,9 +73,10 @@ function startDraw() {
             displayMostFrequent(results);
         }, 1500); // 1.5 secondi di animazione del dado
     } else {
-        alert("Per favore, inserisci un numero valido di estrazioni (1-30).");
+        mostFrequentDiv.innerHTML = `<div style="color: red; font-weight: bold;">Per favore, inserisci un numero valido di estrazioni (1-30).</div>`;
     }
 }
+
 
 
 
