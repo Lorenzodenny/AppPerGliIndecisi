@@ -133,6 +133,18 @@ button:hover {
     align-items: center;
 }
 
+.corvo {
+    display: block;
+    margin: 0 auto; /* Centra l'immagine */
+    margin-top: -5%;
+    width: 100px; /* Dimensione dell'immagine (puoi regolarla come preferisci) */
+    height: auto;
+}
+
+.corvo {
+    filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg) brightness(200%);
+}
+
 
 
 /* Responsività */
